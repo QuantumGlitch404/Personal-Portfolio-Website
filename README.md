@@ -1,6 +1,6 @@
 # Meezab Momin - Professional Full-Stack Portfolio
 
-![Portfolio Preview](./public/cpusim.jpg) 
+![Portfolio Preview](./public/ppw.png) 
 
 A production-grade, highly interactive, and fully responsive personal portfolio website built with **React.js (Vite)** on the frontend and **Node.js, Express, & MongoDB Atlas** on the backend. 
 
