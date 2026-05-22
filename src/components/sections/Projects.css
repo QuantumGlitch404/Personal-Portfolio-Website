@@ -1,0 +1,250 @@
+.projects-editorial {
+  background-color: var(--black);
+  width: 100%;
+}
+
+/* Header styling */
+.projects-header-container {
+  padding: 120px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-header-box {
+  border: 1px solid var(--graphite);
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.ph-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--concrete);
+  letter-spacing: 0.15em;
+  margin-bottom: 40px;
+}
+
+.ph-title {
+  font-size: 56px;
+  line-height: 0.95;
+  margin-bottom: 40px;
+}
+
+.ph-subtitle {
+  font-size: 18px;
+  color: var(--soft-gray);
+  max-width: 500px;
+}
+
+/* Individual Project Spread */
+.project-spread {
+  width: 100%;
+  padding: 120px 80px;
+  display: grid;
+  gap: 80px;
+  border-bottom: 1px solid var(--charcoal);
+  transition: background-color 0.5s ease;
+}
+
+.project-spread:nth-child(even) {
+  background-color: var(--ink-black);
+}
+
+.layout-left {
+  grid-template-columns: 60% 40%;
+}
+
+.layout-right {
+  grid-template-columns: 40% 60%;
+}
+
+.layout-right .project-image-col {
+  order: 2;
+}
+.layout-right .project-content-col {
+  order: 1;
+}
+
+/* Image Column */
+.project-image-col {
+  width: 100%;
+}
+
+.project-screenshot-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--graphite);
+  overflow: hidden;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease-out;
+}
+
+.project-screenshot:hover {
+  filter: brightness(1.05);
+}
+
+/* Content Column */
+.project-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-number {
+  font-size: 12px;
+  color: var(--concrete);
+  margin-bottom: 12px;
+}
+
+.featured-badge {
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: var(--terracotta);
+  letter-spacing: 0.1em;
+}
+
+.project-title {
+  font-size: 40px;
+  line-height: 1.0;
+  margin-bottom: 12px;
+}
+
+/* Make first project prominent */
+.project-spread:first-child .project-title {
+  font-size: 56px;
+}
+.layout-left:first-child {
+  grid-template-columns: 70% 30%;
+}
+
+.project-tagline {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--terracotta);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.project-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--soft-gray);
+  margin-bottom: 32px;
+}
+
+.project-tech-stack {
+  font-size: 13px;
+  color: var(--concrete);
+  margin-bottom: 32px;
+}
+
+/* Metrics Box */
+.project-metrics {
+  border-left: 3px solid var(--terracotta);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.metrics-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--concrete);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.metrics-list {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--soft-gray);
+}
+
+.metrics-list li {
+  margin-bottom: 4px;
+}
+
+/* CTA */
+.cta-link {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--paper-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 2px;
+  transition: all 0.2s ease-out;
+  display: inline-block;
+}
+
+.cta-link:hover {
+  color: var(--terracotta);
+  border-bottom-width: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .project-spread {
+    padding: 80px 40px;
+    gap: 40px;
+  }
+  .layout-left, .layout-right, .layout-left:first-child {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-header-container {
+    padding: 80px 24px;
+  }
+  
+  .project-spread {
+    padding: 60px 24px;
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+  
+  .layout-right .project-image-col { order: 1; }
+  .layout-right .project-content-col { order: 2; }
+  
+  .project-screenshot-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+  
+  .project-title, .project-spread:first-child .project-title {
+    font-size: 32px;
+  }
+  
+  .project-tagline {
+    font-size: 16px;
+  }
+  
+  .project-description {
+    font-size: 16px;
+  }
+}
+
+/* ── Skeleton Loading Animation ── */
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--charcoal, #1a1a1a) 25%,
+    var(--graphite, #2a2a2a) 50%,
+    var(--charcoal, #1a1a1a) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+

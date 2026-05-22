@@ -1,0 +1,31 @@
+:root {
+  /* Colors - Midnight Scholar */
+  --black: #000000;
+  --ink-black: #0d0d0d;
+  --charcoal: #1a1a1a;
+  --graphite: #2a2a2a;
+  
+  /* Text */
+  --paper-white: #fafaf8;
+  --soft-gray: #a8a8a8;
+  --concrete: #6b6b6b;
+  --shadow: #3d3d3d;
+  
+  /* Accents */
+  --terracotta: #d4622e;
+  --terracotta-light: #e67e4d;
+  --sage: #5a7367;
+  --mustard: #d4a439;
+
+  /* Typography */
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-heading: 'DM Sans', 'Inter', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-cursive: 'Caveat', cursive;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
